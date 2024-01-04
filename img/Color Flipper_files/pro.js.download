@@ -1,0 +1,128 @@
+// const colors = [0,1,2,3,4,5,6,7,8,9, 
+//                 "A", "B", "C", "D","E", "F"];
+
+// const btn = document.getElementById("btn");
+// const color = document.querySelector(".color");
+
+// btn.addEventListener("click", function () {
+
+//   let hexColor = "#";
+//   for (let i = 0; i < 6; i++){
+//     hexColor += colors[getRandomNumber()]
+//   }
+
+//     document.body.style.backgroundColor = hexColor;
+//     color.textContent = hexColor;
+// })
+
+// function getRandomNumber() {
+//     return Math.floor(Math.random() * colors.length);
+// }
+
+/*let count = 0;
+
+const value = document.querySelector("#value");
+const btns = document.querySelectorAll(".btn");
+
+btns.forEach(function (btn){
+  btn.addEventListener('click', function(e){
+    const style = e.currentTarget.classList;
+    if (style.contains("decrease")) {
+      count--;
+    } else if (style.contains("increase")){
+      count++
+    } else {
+      count = 0;
+    }
+    if (count > 0){
+      value.style.color = "green";
+    }
+    if (count < 0){
+      value.style.color = "red";
+    }if (count == 0){
+      value.style.color = "black";
+    }
+
+    value.textContent = count;
+  })
+})*/
+ 
+// /* xs */
+// @media (min-width: 475px) {}
+
+// /* sm */
+// @media (min-width: 640px) {}
+
+// /* md */
+// @media (min-width: 768px) {}
+
+// /* lg */
+// @media (min-width: 1024px) {}
+
+// /* xl */
+// @media (max-width: 1280px) {}
+
+// /* 2xl */
+// @media (min-width: 1536px) {}
+
+/*document.addEventListener('DOMContentLoaded', function () {
+  const navBar = document.querySelector('.nav-bar');
+  const navOption = document.querySelector('.nav-option');
+  const navSocialMedia = document.querySelector('.nav-socialmedia');
+  const icon = document.querySelector('.icon');
+
+  icon.addEventListener('click', function () {
+      // Toggle the 'hidden' class on the navigation elements
+      navOption.classList.toggle('hidden');
+      // navSocialMedia.classList.toggle('hidden');
+  });
+}); */
+
+
+/*document.addEventListener('DOMContentLoaded', function () {
+  const modalBtn = document.querySelector('.model-btn');
+  const modal = document.querySelector('.modal-container');
+  const closeBtn = document.querySelector('.close-btn');
+
+  modalBtn.addEventListener('click', function () {
+    modal.classList.add("open-modal");
+  });
+
+  closeBtn.addEventListener('click', function () {
+    modal.classList.remove("open-modal");
+  });
+});*/
+
+/*document.addEventListener('DOMContentLoaded', function () {
+  const questions = document.querySelectorAll(".questions");
+
+  questions.forEach(function (question) {
+    const btn = question.querySelector(".q-btn");
+
+    btn.addEventListener('click', function () {
+      questions.forEach(function (item) {
+        if (item !== question) {
+          item.classList.remove("show-text");
+        }
+      });
+      question.classList.toggle("show-text");
+    });
+  });
+});*/
+
+const btns = document.querySelectorAll(".q-btn");
+
+btns.forEach(function (btn) {
+  btn.addEventListener("click", function(e) {
+    const question = e.currentTarget.parentElement;
+
+    // btns.forEach(function (item) {
+    //   if (item !== btns.parentElement) { // Changed from 'item !== question'
+    //     item.classList.remove("show-text");
+    //   }
+    // });
+
+    question.classList.toggle("show-text")
+  })
+})
+
